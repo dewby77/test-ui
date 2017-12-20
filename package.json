@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cornflourblue/angular2-registration-login-example.git"
+    "url": "https://github.com/dewby77/test-ui.git"
   },
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
@@ -20,7 +20,6 @@
     "@angular/platform-browser": "^5.0.0",
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
-    "@types/angular-jwt": "0.0.29",
     "core-js": "^2.4.1",
     "rxjs": "^5.2.0",
     "systemjs": "^0.20.19",
