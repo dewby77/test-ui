@@ -7,7 +7,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 //import { fakeBackendProvider } from './_helpers/index';
 
 import { AppComponent }  from './app.component';
-import { routing }        from './app.routing';
+import { routing } from './app.routing';
 import { AppConfig } from './app.config';
 
 import { AlertComponent } from './_directives/index';
