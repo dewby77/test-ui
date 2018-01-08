@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var AppConfig = /** @class */ (function () {
     function AppConfig() {
-        this.apiUrl = 'https://testangularwebapi.azurewebsites.net';
+        this.apiUrl = 'http://testangularwebapi.azurewebsites.net';
     }
     return AppConfig;
 }());
