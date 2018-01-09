@@ -29,7 +29,8 @@ var RegisterComponent = /** @class */ (function () {
             _this.router.navigate(['/login']);
         }, function (error) {
             //this.alertService.error(error);
-            _this.alertService.error(error._body);
+            //this.alertService.error(error._body);
+            _this.alertService.error(error.message);
             _this.loading = false;
         });
     };

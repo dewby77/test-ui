@@ -1,3 +1,3 @@
 ﻿export class AppConfig {
-    public readonly apiUrl = 'http://testangularwebapi.azurewebsites.net';
+    public readonly apiUrl = 'https://localhost:59822';
 };

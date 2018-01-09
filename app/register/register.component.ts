@@ -27,7 +27,8 @@ export class RegisterComponent {
                 },
                 error => {
                     //this.alertService.error(error);
-                    this.alertService.error(error._body);
+                    //this.alertService.error(error._body);
+                    this.alertService.error(error.message);
                     this.loading = false;
                 });
     }
