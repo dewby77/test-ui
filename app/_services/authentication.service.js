@@ -21,7 +21,7 @@ var AuthenticationService = /** @class */ (function () {
     AuthenticationService.prototype.login = function (username, password) {
         var headers = new http_1.HttpHeaders({
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "*",
             "Access-Control-Allow-Credentials": "true"

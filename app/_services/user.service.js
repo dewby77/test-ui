@@ -20,7 +20,7 @@ var UserService = /** @class */ (function () {
     UserService.prototype.getAll = function () {
         var headers = new http_1.HttpHeaders({
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "GET",
             "Access-Control-Allow-Credentials": "true"
@@ -30,7 +30,7 @@ var UserService = /** @class */ (function () {
     UserService.prototype.getById = function (id) {
         var headers = new http_1.HttpHeaders({
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "GET",
             "Access-Control-Allow-Credentials": "true"
@@ -40,7 +40,7 @@ var UserService = /** @class */ (function () {
     UserService.prototype.create = function (user) {
         var headers = new http_1.HttpHeaders({
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Credentials": "true"
@@ -50,7 +50,7 @@ var UserService = /** @class */ (function () {
     UserService.prototype.update = function (user) {
         var headers = new http_1.HttpHeaders({
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "PUT",
             "Access-Control-Allow-Credentials": "true"
@@ -60,7 +60,7 @@ var UserService = /** @class */ (function () {
     UserService.prototype.delete = function (id) {
         var headers = new http_1.HttpHeaders({
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "DELETE",
             "Access-Control-Allow-Credentials": "true"

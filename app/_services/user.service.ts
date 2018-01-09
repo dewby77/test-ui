@@ -11,7 +11,7 @@ export class UserService {
     getAll() {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"GET",
             "Access-Control-Allow-Credentials": "true"
@@ -23,7 +23,7 @@ export class UserService {
     getById(id: number) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"GET",
             "Access-Control-Allow-Credentials": "true"
@@ -35,7 +35,7 @@ export class UserService {
     create(user: User) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"POST",
             "Access-Control-Allow-Credentials": "true"
@@ -47,7 +47,7 @@ export class UserService {
     update(user: User) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"PUT",
             "Access-Control-Allow-Credentials": "true"
@@ -59,7 +59,7 @@ export class UserService {
     delete(id: number) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"DELETE",
             "Access-Control-Allow-Credentials": "true"
