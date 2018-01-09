@@ -18,19 +18,49 @@ var UserService = /** @class */ (function () {
         this.config = config;
     }
     UserService.prototype.getAll = function () {
-        return this.http.get(this.config.apiUrl + '/users');
+        var headers = new http_1.HttpHeaders({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET"
+        });
+        return this.http.get(this.config.apiUrl + '/users', { headers: headers, withCredentials: true });
     };
     UserService.prototype.getById = function (id) {
-        return this.http.get(this.config.apiUrl + '/users/' + id);
+        var headers = new http_1.HttpHeaders({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "GET"
+        });
+        return this.http.get(this.config.apiUrl + '/users/' + id, { headers: headers, withCredentials: true });
     };
     UserService.prototype.create = function (user) {
-        return this.http.post(this.config.apiUrl + '/users', user);
+        var headers = new http_1.HttpHeaders({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "POST"
+        });
+        return this.http.post(this.config.apiUrl + '/users', user, { headers: headers, withCredentials: true });
     };
     UserService.prototype.update = function (user) {
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user);
+        var headers = new http_1.HttpHeaders({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "PUT"
+        });
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers: headers, withCredentials: true });
     };
     UserService.prototype.delete = function (id) {
-        return this.http.delete(this.config.apiUrl + '/users/' + id);
+        var headers = new http_1.HttpHeaders({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Headers": "Content-Type",
+            "Access-Control-Allow-Methods": "DELETE"
+        });
+        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers: headers, withCredentials: true });
     };
     UserService = __decorate([
         core_1.Injectable(),

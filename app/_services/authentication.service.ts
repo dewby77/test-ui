@@ -9,7 +9,14 @@ export class AuthenticationService {
     constructor(private http: HttpClient, private config: AppConfig) { }
 
     login(username: string, password: string) {
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password })
+        let headers = new HttpHeaders({
+            "Content-Type":"application/json",
+            "Access-Control-Allow-Origin":"*",
+            "Access-Control-Allow-Headers":"Content-Type",
+            "Access-Control-Allow-Methods":"*"
+        });
+
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers, withCredentials: true })
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let user = <any>response;
