@@ -23,8 +23,7 @@ var AuthenticationService = /** @class */ (function () {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Methods": "*",
-            "Access-Control-Allow-Credentials": "true"
+            "Access-Control-Allow-Methods": "*"
         });
         return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers: headers, withCredentials: true })
             .map(function (response) {

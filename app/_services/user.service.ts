@@ -13,8 +13,7 @@ export class UserService {
             "Content-Type":"application/json",
             "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"GET",
-            "Access-Control-Allow-Credentials": "true"
+            "Access-Control-Allow-Methods":"GET"
         });
 
         return this.http.get(this.config.apiUrl + '/users', { headers, withCredentials: true });
@@ -25,8 +24,7 @@ export class UserService {
             "Content-Type":"application/json",
             "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"GET",
-            "Access-Control-Allow-Credentials": "true"
+            "Access-Control-Allow-Methods":"GET"
         });
 
         return this.http.get(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
@@ -37,8 +35,7 @@ export class UserService {
             "Content-Type":"application/json",
             "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"POST",
-            "Access-Control-Allow-Credentials": "true"
+            "Access-Control-Allow-Methods":"POST"
         });
 
         return this.http.post(this.config.apiUrl + '/users', user, { headers, withCredentials: true });
@@ -49,8 +46,7 @@ export class UserService {
             "Content-Type":"application/json",
             "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"PUT",
-            "Access-Control-Allow-Credentials": "true"
+            "Access-Control-Allow-Methods":"PUT"
         });
 
         return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers, withCredentials: true });
@@ -61,8 +57,7 @@ export class UserService {
             "Content-Type":"application/json",
             "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
             "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"DELETE",
-            "Access-Control-Allow-Credentials": "true"
+            "Access-Control-Allow-Methods":"DELETE"
         });
 
         return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
