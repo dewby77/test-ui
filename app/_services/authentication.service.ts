@@ -13,7 +13,8 @@ export class AuthenticationService {
             "Content-Type":"application/json",
             "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"*"
+            "Access-Control-Allow-Methods":"*",
+            "Access-Control-Allow-Credentials": "true"
         });
 
         return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers, withCredentials: true })
