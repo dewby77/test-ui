@@ -11,60 +11,60 @@ export class UserService {
     getAll() {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"GET",
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.get(this.config.apiUrl + '/users', { headers, withCredentials: true });
+        return this.http.get(this.config.apiUrl + '/users', { headers });
     }
 
     getById(id: number) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"GET",
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.get(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
+        return this.http.get(this.config.apiUrl + '/users/' + id, { headers });
     }
 
     create(user: User) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"POST",
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.post(this.config.apiUrl + '/users', user, { headers, withCredentials: true });
+        return this.http.post(this.config.apiUrl + '/users', user, { headers });
     }
 
     update(user: User) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"PUT",
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers, withCredentials: true });
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers });
     }
 
     delete(id: number) {
         let headers = new HttpHeaders({
             "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net/",
+            "Access-Control-Allow-Origin":"*",
             "Access-Control-Allow-Headers":"Content-Type",
             "Access-Control-Allow-Methods":"DELETE",
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
+        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers });
     }  
 }
