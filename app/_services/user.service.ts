@@ -17,7 +17,7 @@ export class UserService {
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.get(this.config.apiUrl + '/users', { headers });
+        return this.http.get(this.config.apiUrl + '/users', { headers, withCredentials: true });
     }
 
     getById(id: number) {
@@ -29,7 +29,7 @@ export class UserService {
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.get(this.config.apiUrl + '/users/' + id, { headers });
+        return this.http.get(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
     }
 
     create(user: User) {
@@ -41,7 +41,7 @@ export class UserService {
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.post(this.config.apiUrl + '/users', user, { headers });
+        return this.http.post(this.config.apiUrl + '/users', user, { headers, withCredentials: true });
     }
 
     update(user: User) {
@@ -53,7 +53,7 @@ export class UserService {
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers });
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers, withCredentials: true });
     }
 
     delete(id: number) {
@@ -65,6 +65,6 @@ export class UserService {
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers });
+        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
     }  
 }

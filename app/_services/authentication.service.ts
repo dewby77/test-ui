@@ -17,7 +17,7 @@ export class AuthenticationService {
             "Access-Control-Allow-Credentials": "true"
         });
 
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers })
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers, withCredentials: true })
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let user = <any>response;
