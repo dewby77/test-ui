@@ -10,14 +10,10 @@ export class AuthenticationService {
 
     login(username: string, password: string) {
         let headers = new HttpHeaders({
-            "Content-Type":"application/json",
-            "Access-Control-Allow-Origin":"https://testangularwebui.azurewebsites.net",
-            "Access-Control-Allow-Headers":"Content-Type",
-            "Access-Control-Allow-Methods":"*",
-            "Access-Control-Allow-Credentials": "true"
+            "Content-Type":"application/json"
         });
 
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers })
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password },{ headers, withCredentials: true })
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let user = <any>response;

@@ -20,13 +20,9 @@ var AuthenticationService = /** @class */ (function () {
     }
     AuthenticationService.prototype.login = function (username, password) {
         var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "https://testangularwebui.azurewebsites.net",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Allow-Methods": "*",
-            "Access-Control-Allow-Credentials": "true"
+            "Content-Type": "application/json"
         });
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers: headers })
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers: headers, withCredentials: true })
             .map(function (response) {
             // login successful if there's a jwt token in the response
             var user = response;
