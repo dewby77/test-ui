@@ -24,7 +24,7 @@ var UserService = /** @class */ (function () {
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "GET"
         });
-        return this.http.get(this.config.apiUrl + '/users');
+        return this.http.get(this.config.apiUrl + '/users', { headers: headers, withCredentials: true });
     };
     UserService.prototype.getById = function (id) {
         var headers = new http_1.HttpHeaders({
@@ -33,7 +33,7 @@ var UserService = /** @class */ (function () {
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "GET"
         });
-        return this.http.get(this.config.apiUrl + '/users/' + id);
+        return this.http.get(this.config.apiUrl + '/users/' + id, { headers: headers, withCredentials: true });
     };
     UserService.prototype.create = function (user) {
         var headers = new http_1.HttpHeaders({
@@ -42,7 +42,7 @@ var UserService = /** @class */ (function () {
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "POST"
         });
-        return this.http.post(this.config.apiUrl + '/users', user);
+        return this.http.post(this.config.apiUrl + '/users', user, { headers: headers, withCredentials: true });
     };
     UserService.prototype.update = function (user) {
         var headers = new http_1.HttpHeaders({
@@ -51,7 +51,7 @@ var UserService = /** @class */ (function () {
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "PUT"
         });
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user);
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers: headers, withCredentials: true });
     };
     UserService.prototype.delete = function (id) {
         var headers = new http_1.HttpHeaders({
@@ -60,8 +60,7 @@ var UserService = /** @class */ (function () {
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "DELETE"
         });
-        //return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
-        return this.http.delete(this.config.apiUrl + '/users/' + id);
+        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers: headers, withCredentials: true });
     };
     UserService = __decorate([
         core_1.Injectable(),

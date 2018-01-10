@@ -25,7 +25,7 @@ var AuthenticationService = /** @class */ (function () {
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "*"
         });
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password })
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers: headers, withCredentials: true })
             .map(function (response) {
             // login successful if there's a jwt token in the response
             var user = response;

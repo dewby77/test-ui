@@ -16,7 +16,7 @@ export class UserService {
             "Access-Control-Allow-Methods":"GET"
         });
 
-        return this.http.get(this.config.apiUrl + '/users');
+        return this.http.get(this.config.apiUrl + '/users', { headers, withCredentials: true });
     }
 
     getById(id: number) {
@@ -27,7 +27,7 @@ export class UserService {
             "Access-Control-Allow-Methods":"GET"
         });
 
-        return this.http.get(this.config.apiUrl + '/users/' + id);
+        return this.http.get(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
     }
 
     create(user: User) {
@@ -38,7 +38,7 @@ export class UserService {
             "Access-Control-Allow-Methods":"POST"
         });
 
-        return this.http.post(this.config.apiUrl + '/users', user);
+        return this.http.post(this.config.apiUrl + '/users', user, { headers, withCredentials: true });
     }
 
     update(user: User) {
@@ -49,7 +49,7 @@ export class UserService {
             "Access-Control-Allow-Methods":"PUT"
         });
 
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user);
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers, withCredentials: true });
     }
 
     delete(id: number) {
@@ -60,7 +60,6 @@ export class UserService {
             "Access-Control-Allow-Methods":"DELETE"
         });
 
-        //return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
-        return this.http.delete(this.config.apiUrl + '/users/' + id);
+        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
     }  
 }
