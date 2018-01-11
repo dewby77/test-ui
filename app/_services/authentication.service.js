@@ -19,10 +19,7 @@ var AuthenticationService = /** @class */ (function () {
         this.config = config;
     }
     AuthenticationService.prototype.login = function (username, password) {
-        var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json"
-        });
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password }, { headers: headers, withCredentials: true })
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password })
             .map(function (response) {
             // login successful if there's a jwt token in the response
             var user = response;

@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 
 import { AppConfig } from '../app.config';
 import { User } from '../_models/index';
@@ -9,42 +9,22 @@ export class UserService {
     constructor(private http: HttpClient, private config: AppConfig) { }
 
     getAll() {
-        let headers = new HttpHeaders({
-            "Content-Type":"application/json"
-        });
-
-        return this.http.get(this.config.apiUrl + '/users', { headers, withCredentials: true });
+        return this.http.get(this.config.apiUrl + '/users');
     }
 
     getById(id: number) {
-        let headers = new HttpHeaders({
-            "Content-Type":"application/json"
-        });
-
-        return this.http.get(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
+        return this.http.get(this.config.apiUrl + '/users/' + id);
     }
 
     create(user: User) {
-        let headers = new HttpHeaders({
-            "Content-Type":"application/json"
-        });
-
-        return this.http.post(this.config.apiUrl + '/users', user, { headers, withCredentials: true });
+        return this.http.post(this.config.apiUrl + '/users', user);
     }
 
     update(user: User) {
-        let headers = new HttpHeaders({
-            "Content-Type":"application/json"
-        });
-
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers, withCredentials: true });
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user);
     }
 
     delete(id: number) {
-        let headers = new HttpHeaders({
-            "Content-Type":"application/json"
-        });
-
-        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers, withCredentials: true });
+        return this.http.delete(this.config.apiUrl + '/users/' + id);
     }  
 }

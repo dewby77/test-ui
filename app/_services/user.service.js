@@ -18,34 +18,19 @@ var UserService = /** @class */ (function () {
         this.config = config;
     }
     UserService.prototype.getAll = function () {
-        var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json"
-        });
-        return this.http.get(this.config.apiUrl + '/users', { headers: headers, withCredentials: true });
+        return this.http.get(this.config.apiUrl + '/users');
     };
     UserService.prototype.getById = function (id) {
-        var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json"
-        });
-        return this.http.get(this.config.apiUrl + '/users/' + id, { headers: headers, withCredentials: true });
+        return this.http.get(this.config.apiUrl + '/users/' + id);
     };
     UserService.prototype.create = function (user) {
-        var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json"
-        });
-        return this.http.post(this.config.apiUrl + '/users', user, { headers: headers, withCredentials: true });
+        return this.http.post(this.config.apiUrl + '/users', user);
     };
     UserService.prototype.update = function (user) {
-        var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json"
-        });
-        return this.http.put(this.config.apiUrl + '/users/' + user.id, user, { headers: headers, withCredentials: true });
+        return this.http.put(this.config.apiUrl + '/users/' + user.id, user);
     };
     UserService.prototype.delete = function (id) {
-        var headers = new http_1.HttpHeaders({
-            "Content-Type": "application/json"
-        });
-        return this.http.delete(this.config.apiUrl + '/users/' + id, { headers: headers, withCredentials: true });
+        return this.http.delete(this.config.apiUrl + '/users/' + id);
     };
     UserService = __decorate([
         core_1.Injectable(),

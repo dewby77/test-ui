@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { AppConfig } from '../app.config';
@@ -9,11 +9,7 @@ export class AuthenticationService {
     constructor(private http: HttpClient, private config: AppConfig) { }
 
     login(username: string, password: string) {
-        let headers = new HttpHeaders({
-            "Content-Type":"application/json"
-        });
-
-        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password },{ headers, withCredentials: true })
+        return this.http.post(this.config.apiUrl + '/users/authenticate', { username: username, password: password })
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
                 let user = <any>response;
