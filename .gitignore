@@ -42,3 +42,7 @@ app/**/*.js.map
 
 # VS Code settings
 .vscode
+
+# Configuration files
+app/main.*
+app/app.config.*
