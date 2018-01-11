@@ -44,9 +44,5 @@ app/**/*.js.map
 .vscode
 
 # Configuration files
-app/main.js
-app/main.ts
-app/main.map
-app/app.config.js
-app/app.config.ts
-app/app.config.map
+app/main.*
+app/app.config.*
